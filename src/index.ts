@@ -19,31 +19,7 @@ const openai = new OpenAI({
 
 app.post("/api/chat", async (req, res) => {
   const { messages, sessionId } = req.body;
-
-  // res.set({
-  //   "Content-Type": "text/event-stream",
-  //   "Cache-Control": "no-cache",
-  //   Connection: "keep-alive",
-  // });
-
-  // const stream = await openai.chat.completions.create({
-  //   model: "gpt-3.5-turbo",
-  //   temperature: 0.2,
-  //   stream: true,
-  //   messages: [
-  //     { role: "system", content: `You are a triage assistant…` },
-  //     // ...history,
-  //     ...messages,
-  //   ],
-  // });
-  // for await (const chunk of stream) {
-  //   const delta = chunk.choices[0]?.delta?.content || "";
-
-  //   res.write(`data:${delta}\n\n`);
-  // }
-  // res.write("data:[DONE]\n\n");
-  // res.end();
-
+  console.log(messages);
   try {
     const chat = await openai.chat.completions.create({
       model: "deepseek/deepseek-r1-0528:free",
