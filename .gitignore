@@ -20,11 +20,6 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 
-# DB dumps
-*.sql
-*.sqlite
-*.db
-
 # Testing and coverage
 coverage/
 *.lcov
